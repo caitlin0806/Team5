@@ -51,6 +51,8 @@ which.min(mse)
 mse[11]
 
 pruned.carseats = prune.tree(tree.carseats, best = 11)
+summary(pruned.carseats)
+
 par(mfrow = c(1, 1))
 plot(pruned.carseats)
 text(pruned.carseats, pretty = 0)
