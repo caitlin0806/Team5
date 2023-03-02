@@ -91,7 +91,7 @@ plot(x=mtry, y=mse)
 which.min(mse)
 
 #Changing m varies test MSE between 2.599 to 4.795
-mse[7] #=2.599039 MSE (bagging), random forest increases MSE
+mse[7] #=2.599039 MSE
 
 #price, shelveloc, and comprice top 3 important
 importance(rf.carseats)
