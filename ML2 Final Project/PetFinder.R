@@ -264,10 +264,10 @@ xgboost_accuracy ###ACCURACY RATE = 37.06%
 
 
 
-# Tune eta: Loop through learning rates from 0 to 2, interval=0.1 to see if accuracy increases
+# Tune eta: Loop through learning rates from 0 to 1, interval=0.1 to see if accuracy increases
 set.seed(1693)
 xgboost_accuracy_tune <- c()
-eta_seq <- seq(0, 2, 0.1) 
+eta_seq <- seq(0, 1, 0.1) 
 index <- 1
 for (j in eta_seq){
   set.seed(1693)
@@ -288,10 +288,10 @@ xgboost_accuracy_tune
 
 
 #Changing eta varies accuracy 
-xgboost_accuracy_tune[12] 
-eta_seq[12]
-xgboost_accuracy_tune_max <- xgboost_accuracy_tune[12]
-xgboost_accuracy_tune_max ################################### ACCURACY=38.35%  at eta=1.1
+xgboost_accuracy_tune[10] 
+eta_seq[10]
+xgboost_accuracy_tune_max <- xgboost_accuracy_tune[10]
+xgboost_accuracy_tune_max ################################### ACCURACY=38.09%  at eta=0.9
 
 
 ########################NEURAL NETWORK#########################################
@@ -346,6 +346,7 @@ set.seed(1693)
 #added an output layer with 5 units since that is the number of classes
 #in the dependent variable, and softmax activation since it is used for multi-classifcation
 #compiled the model with a categorical crossentropy loss function 
+#sunce is good for dependent variable with more than 2 classes
 #that calculates the error between true and predicted values
 #used adam optimizer to minimize the error between true and predicted labels
 #used accuracy as metric
@@ -389,7 +390,7 @@ lda_accuracy #35.79% ACCURACY
 rf_accuracy #40.60% ACCURACY
 rf_accuracy_tune_max #40.62% ACCURACY
 xgboost_accuracy #37.06% ACCURACY
-xgboost_accuracy_tune_max #38.35% ACCURACY
+xgboost_accuracy_tune_max #38.09% ACCURACY
 NN_accuracy #38% ACCURACY
 
 #Tuning the Random Forest gave the best accuracy at 40.62%
