@@ -346,12 +346,12 @@ set.seed(1693)
 #added an output layer with 5 units since that is the number of classes
 #in the dependent variable, and softmax activation since it is used for multi-classifcation
 #compiled the model with a categorical crossentropy loss function 
-#sunce is good for dependent variable with more than 2 classes
+#since it's good for dependent variable with more than 2 classes
 #that calculates the error between true and predicted values
 #used adam optimizer to minimize the error between true and predicted labels
 #used accuracy as metric
 #fit the model using the scaled train data and train labels using 50 epochs
-# 32 for batch size and 0.2 for validation split
+#32 for batch size and 0.2 for validation split
 
 NNmodel <- keras_model_sequential()
 set.seed(1693)
